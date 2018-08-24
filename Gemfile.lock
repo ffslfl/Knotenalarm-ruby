@@ -5,11 +5,16 @@ GIT
     matrix_sdk (0.0.3)
       logging (~> 2)
 
+GIT
+  remote: https://github.com/floraison/et-orbi
+  revision: ffa11bdd4714302475c8a969e09d486150b9a608
+  specs:
+    et-orbi (1.1.5)
+      tzinfo
+
 GEM
   remote: https://rubygems.org/
   specs:
-    et-orbi (1.1.4)
-      tzinfo
     fugit (1.1.5)
       et-orbi (~> 1.1, >= 1.1.3)
       raabro (~> 1.1)
@@ -34,6 +39,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  et-orbi!
   httparty
   matrix_sdk!
   rufus-scheduler
