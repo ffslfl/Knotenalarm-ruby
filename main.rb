@@ -13,6 +13,7 @@ class Main
     config_url = config["config_url"]
     response = self.class.get(config_url)
     parsed_response = response.parsed_response
+    parsed_response ||= JSON.parse("{}")
     parsed_response["dataPath"].each do |data_path|
       puts "#{Time.now.strftime('%d. %h %G | %T')} - [START] URL: #{data_path}"
       nodelist "#{data_path}/nodelist.json"
